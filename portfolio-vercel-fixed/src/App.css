@@ -1,0 +1,68 @@
+/* Main App Container */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Steam Effects */
+.steam-particle {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: steam-rise 8s infinite ease-in-out;
+}
+
+@keyframes steam-rise {
+  0% {
+    transform: translateY(100vh) scale(0.5);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Gear Animation */
+.gear {
+  animation: rotate-continuous 20s linear infinite;
+}
+
+@keyframes rotate-continuous {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.gear-reverse {
+  animation: rotate-reverse 15s linear infinite;
+}
+
+@keyframes rotate-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+/* Bioluminescent Glow */
+.bioluminescent-glow {
+  animation: bioluminescent-pulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes bioluminescent-pulse {
+  from {
+    box-shadow: 0 0 10px var(--bioluminescent), 
+                0 0 20px var(--bioluminescent),
+                0 0 30px var(--bioluminescent);
+  }
+  to {
+    box-shadow: 0 0 20px var(--bioluminescent), 
+                0 0 30px var(--bioluminescent),
+                0 0 40px var(--bioluminescent);
+  }
+}

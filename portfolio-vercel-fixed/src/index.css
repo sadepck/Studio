@@ -1,0 +1,115 @@
+/* Steampunk Botanical Portfolio - Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600;800&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Rye&family=Bebas+Neue&display=swap');
+
+:root {
+  /* Industrial Color Palette */
+  --coal-dark: #1a1410;
+  --forged-iron: #2d2420;
+  --copper-oxidized: #8b4513;
+  --brass-bright: #b8860b;
+  --old-gold: #daa520;
+  --bronze-dark: #4a2c2a;
+  
+  /* Botanical Colors */
+  --forest-green: #1a4d2e;
+  --moss-green: #4a7c59;
+  --fern-green: #2d5a3d;
+  --bioluminescent: #7fff00;
+  --leaf-dark: #0f2818;
+  
+  /* Metal Textures */
+  --metal-gradient: linear-gradient(135deg, #8b4513, #cd853f, #daa520);
+  --bronze-gradient: linear-gradient(145deg, #4a2c2a, #8b4513, #cd853f);
+  --dark-gradient: linear-gradient(180deg, #1a1410, #2d2420, #1a1410);
+  --vignette: radial-gradient(ellipse at center, transparent 0%, rgba(26, 20, 16, 0.4) 70%, rgba(26, 20, 16, 0.8) 100%);
+  
+  /* Typography */
+  --font-industrial: 'Roboto Slab', serif;
+  --font-victorian: 'Rye', cursive;
+  --font-classic: 'Crimson Text', serif;
+  --font-display: 'Bebas Neue', cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-classic);
+  background: 
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.15'/%3E%3C/svg%3E"),
+    var(--dark-gradient);
+  color: #f4e4d4;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--vignette);
+  pointer-events: none;
+  z-index: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-industrial);
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+button {
+  font-family: var(--font-industrial);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Enhanced Gear Animations */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spin-slow-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.gear-3d {
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.8));
+  transform-style: preserve-3d;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--coal-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--copper-oxidized);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brass-bright);
+}

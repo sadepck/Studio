@@ -1,0 +1,623 @@
+/* Projects Section - The Machine Room - Enhanced Atmosphere */
+.projects-section {
+  position: relative;
+  min-height: 100vh;
+  background: 
+    /* Technical Pattern Background */
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 100px,
+      rgba(184, 115, 51, 0.03) 100px,
+      rgba(184, 115, 51, 0.03) 102px,
+      transparent 102px,
+      transparent 202px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 100px,
+      rgba(76, 175, 80, 0.02) 100px,
+      rgba(76, 175, 80, 0.02) 102px,
+      transparent 102px,
+      transparent 202px
+    ),
+    radial-gradient(circle at center, rgba(46, 139, 87, 0.05) 0%, #141414 70%),
+    linear-gradient(180deg, #141414 0%, #1a1a1a 50%, #0f0f0f 100%);
+  padding: 12rem 2rem 4rem;
+  overflow: visible !important;
+  margin-top: -30px;
+  margin-bottom: 150px;
+  z-index: 2;
+}
+
+/* Metallic Vine Pattern Background - Reduced Opacity */
+.metallic-vines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+.vine-pattern-left,
+.vine-pattern-right,
+.vine-pattern-top,
+.vine-pattern-bottom {
+  position: absolute;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(184, 115, 51, 0.1) 10px,
+    rgba(184, 115, 51, 0.1) 12px,
+    transparent 12px,
+    transparent 22px
+  );
+}
+
+.vine-pattern-left {
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100%;
+  background-size: 20px 20px;
+}
+
+.vine-pattern-right {
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  background-size: 20px 20px;
+  transform: scaleX(-1);
+}
+
+.vine-pattern-top {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background-size: 20px 20px;
+}
+
+.vine-pattern-bottom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background-size: 20px 20px;
+  transform: scaleY(-1);
+}
+
+/* Section Titles - Enhanced Spacing and Z-Index */
+.section-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #e1c16e;
+  text-align: center;
+  margin: 3rem 0 2rem;
+  text-shadow: 
+    0 0 20px rgba(225, 193, 110, 0.3),
+    2px 4px 8px rgba(0,0,0,0.9),
+    0px 0px 30px rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.05em;
+  position: relative;
+  z-index: 30;
+  padding-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: rgba(244, 228, 212, 0.7);
+  text-align: center;
+  margin-bottom: 5rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  position: relative;
+  z-index: 30;
+  padding-bottom: 1rem;
+}
+
+/* Projects Container - Enhanced Spacing */
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  padding: 2rem 0;
+}
+
+/* Karü Rayen Card - Premium Greenhouse Window with Crystal Effect */
+.karu-rayen-card {
+  position: relative;
+  background: linear-gradient(135deg, #2d1810 0%, #1a0e08 50%, #2d1810 100%);
+  border-radius: 12px;
+  border: 5px solid;
+  border-image: linear-gradient(135deg, #b87333, #ffd700, #b87333, #8b4513) 1;
+  padding: 3rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+  width: 90%;
+  opacity: 0;
+  transform: translateY(50px) scale(0.9);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: visible;
+  box-shadow: 
+    0 20px 50px rgba(0,0,0,0.8),
+    0 10px 25px rgba(0,0,0,0.6),
+    inset 0 2px 4px rgba(255,255,255,0.1);
+  z-index: 15;
+}
+
+/* Crystal Glass Reflection Effect */
+.karu-rayen-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    transparent 0%, 
+    rgba(255,255,255,0.05) 50%, 
+    transparent 100%);
+  border-radius: 12px;
+  pointer-events: none;
+  z-index: 16;
+}
+
+.projects-section.animate .karu-rayen-card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Brass Frame Structure - Premium Greenhouse */
+.card-frame {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 18;
+}
+
+.frame-outer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #b87333, #ffd700, #b87333, #8b4513);
+  border-radius: 20px;
+  box-shadow: 
+    0 15px 35px rgba(0,0,0,0.8),
+    inset 0 2px 4px rgba(255,255,255,0.2),
+    inset 0 -2px 4px rgba(0,0,0,0.5);
+}
+
+.frame-inner {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  background: linear-gradient(135deg, #3e2723, #5d4037, #3e2723);
+  border-radius: 12px;
+  box-shadow: inset 0 4px 8px rgba(0,0,0,0.8);
+}
+
+/* Premium Corner Rivets with Dynamic Pulsing */
+.frame-rivets {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 19;
+}
+
+.rivet {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #ffd700, #b87333);
+  border-radius: 50%;
+  border: 3px solid #8b4513;
+  box-shadow: 
+    0 4px 8px rgba(0,0,0,0.8),
+    inset 0 2px 4px rgba(255,255,255,0.3);
+  animation: rivet-pulse 3s ease-in-out infinite;
+}
+
+@keyframes rivet-pulse {
+  0%, 100% {
+    opacity: 0.6;
+    box-shadow: 
+      0 4px 8px rgba(0,0,0,0.8),
+      inset 0 2px 4px rgba(255,255,255,0.3);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 
+      0 6px 12px rgba(255, 215, 0, 0.6),
+      inset 0 3px 6px rgba(255,255,255,0.5);
+  }
+}
+
+.rivet-1 { top: -10px; left: -10px; animation-delay: 0s; }
+.rivet-2 { top: -10px; right: -10px; animation-delay: 0.4s; }
+.rivet-3 { bottom: -10px; left: -10px; animation-delay: 0.8s; }
+.rivet-4 { bottom: -10px; right: -10px; animation-delay: 1.2s; }
+.rivet-5 { top: 50%; left: -10px; transform: translateY(-50%); animation-delay: 1.6s; }
+.rivet-6 { top: 50%; right: -10px; transform: translateY(-50%); animation-delay: 2s; }
+.rivet-7 { top: -10px; left: 50%; transform: translateX(-50%); animation-delay: 2.4s; }
+.rivet-8 { bottom: -10px; left: 50%; transform: translateX(-50%); animation-delay: 2.8s; }
+
+/* Card Content */
+.card-content {
+  position: relative;
+  z-index: 20;
+  text-align: center;
+}
+
+.project-header {
+  margin-bottom: 2rem;
+}
+
+.project-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #e1c16e;
+  margin: 0 0 0.5rem;
+  text-shadow: 
+    0 0 15px rgba(225, 193, 110, 0.3),
+    2px 4px 8px rgba(0,0,0,0.9);
+}
+
+.project-subtitle {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #50C878;
+  margin: 0 0 1rem;
+  text-shadow: 0 0 20px rgba(80, 200, 120, 0.6);
+}
+
+.project-location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: 'Crimson Text', serif;
+  font-size: 1.1rem;
+  color: rgba(244, 228, 212, 0.8);
+  margin: 0;
+}
+
+.location-icon {
+  font-size: 1.2rem;
+}
+
+/* Project Image Placeholder */
+.project-image {
+  margin: 2rem 0;
+  position: relative;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(135deg, #1a3b1a, #2d5a2d, #1a3b1a);
+  border-radius: 15px;
+  border: 3px solid #4CAF50;
+  box-shadow: 
+    0 8px 16px rgba(0,0,0,0.6),
+    inset 0 2px 4px rgba(76, 175, 80, 0.2),
+    inset 0 -2px 4px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-placeholder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(76, 175, 80, 0.1) 10px,
+    rgba(76, 175, 80, 0.1) 12px,
+    transparent 12px,
+    transparent 22px
+  );
+  pointer-events: none;
+}
+
+.placeholder-content {
+  text-align: center;
+  color: #f5f5dc;
+  z-index: 2;
+  position: relative;
+}
+
+.placeholder-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
+}
+
+.placeholder-text {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.placeholder-subtext {
+  font-family: 'Crimson Text', serif;
+  font-size: 1rem;
+  font-style: italic;
+  opacity: 0.8;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+.project-description {
+  margin: 2rem 0;
+}
+
+.project-description p {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #f5f5dc;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  margin: 0;
+}
+
+/* Project Tags */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.tag {
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 2px solid;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tag-react {
+  color: #61dafb;
+  border-color: #61dafb;
+  background: rgba(97, 218, 251, 0.1);
+}
+
+.tag-ecommerce {
+  color: #ffd700;
+  border-color: #ffd700;
+  background: rgba(255, 215, 0, 0.1);
+}
+
+.tag-botanical {
+  color: #4CAF50;
+  border-color: #4CAF50;
+  background: rgba(76, 175, 80, 0.1);
+}
+
+.tag-business {
+  color: #e1c16e;
+  border-color: #e1c16e;
+  background: rgba(225, 193, 110, 0.1);
+}
+
+/* Action Buttons - Mechanical Press Style */
+.project-actions {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.action-button {
+  position: relative;
+  padding: 1.2rem 2.5rem;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.action-button.primary {
+  background: linear-gradient(135deg, #4CAF50, #2E8B57);
+  color: white;
+  box-shadow: 
+    0 8px 16px rgba(76, 175, 80, 0.4),
+    inset 0 2px 4px rgba(255,255,255,0.2);
+}
+
+.action-button.secondary {
+  background: linear-gradient(135deg, #b87333, #8b4513);
+  color: white;
+  box-shadow: 
+    0 8px 16px rgba(184, 115, 51, 0.4),
+    inset 0 2px 4px rgba(255,255,255,0.2);
+}
+
+.action-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 12px 24px rgba(0,0,0,0.6),
+    inset 0 1px 2px rgba(255,255,255,0.3);
+}
+
+.action-button:active {
+  transform: translateY(0);
+  box-shadow: 
+    0 4px 8px rgba(0,0,0,0.8),
+    inset 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.button-text {
+  position: relative;
+  z-index: 2;
+}
+
+.button-rivets {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.rivet-small {
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, rgba(255,255,255,0.8), rgba(255,255,255,0.4));
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.6);
+}
+
+/* Botanical Elements - Refined and Subtle - Lower Z-Index */
+.botanical-embrace {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5;
+  filter: blur(1px);
+}
+
+.embrace-vine-left,
+.embrace-fern-right,
+.embrace-leaves-bottom {
+  position: absolute;
+  opacity: 0.4;
+  filter: blur(1px);
+  animation: float-gentle 8s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+.embrace-vine-left {
+  animation-delay: 0s;
+  width: 180px;
+  height: 400px;
+  top: 30%;
+  left: -2%;
+}
+
+.embrace-fern-right {
+  animation-delay: 2s;
+  width: 200px;
+  height: 450px;
+  top: 25%;
+  right: -2%;
+}
+
+.embrace-leaves-bottom {
+  animation-delay: 4s;
+  width: 300px;
+  height: 150px;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-3px) rotate(0.5deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-3px) rotate(-0.5deg);
+  }
+}
+
+/* Hover Effects */
+.karu-rayen-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.9);
+}
+
+.karu-rayen-card:hover .frame-outer {
+  background: linear-gradient(135deg, #ffd700, #b87333, #ffd700, #8b4513);
+  box-shadow: 
+    0 20px 40px rgba(255, 215, 0, 0.3),
+    inset 0 2px 4px rgba(255,255,255,0.3),
+    inset 0 -2px 4px rgba(0,0,0,0.5);
+}
+
+.karu-rayen-card:hover .rivet {
+  background: radial-gradient(circle, #ffffff, #ffd700);
+  box-shadow: 
+    0 6px 12px rgba(255, 215, 0, 0.6),
+    inset 0 2px 4px rgba(255,255,255,0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .karu-rayen-card {
+    padding: 2rem;
+    margin: 1rem;
+  }
+  
+  .project-title {
+    font-size: 2.2rem;
+  }
+  
+  .project-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .project-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .action-button {
+    width: 100%;
+  }
+}
